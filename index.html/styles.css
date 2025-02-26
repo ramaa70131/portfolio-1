@@ -1,0 +1,649 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+nav {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo h1 {
+    font-size: 24px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideRight 1s ease-in-out forwards;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideLeft 1s ease-in-out forwards;
+}
+
+.nav-links li:nth-child(1) { animation-delay: 0.2s; }
+.nav-links li:nth-child(2) { animation-delay: 0.4s; }
+.nav-links li:nth-child(3) { animation-delay: 0.6s; }
+.nav-links li:nth-child(4) { animation-delay: 0.8s; }
+.nav-links li:nth-child(5) { animation-delay: 1s; }
+.nav-links li:nth-child(6) { animation-delay: 1.2s; }
+.nav-links li:nth-child(7) { animation-delay: 1.4s; }
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+/* Slide animations */
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Home Section */
+.home-section {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 60px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.home-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.home-section .cta-btn {
+    background-color: orange; /* Neon blue button */
+    color: #000; /* Black text for the button */
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.home-section .cta-btn:hover {
+    background-color:orange;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 0;
+    background-color: #000; /* Black background */
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.banner_content {
+    width: 60%;
+}
+.text{
+    color: orange;
+
+}
+
+
+
+
+
+
+
+/* Skills Section */
+#skills {
+    background-color: #000;
+    padding: 60px 0;
+}
+
+.skills-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.skill-card {
+    background-color: #1c1c1c; /* Dark gray background for cards */
+    width: 22%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card i {
+    font-size: 40px;
+    color: orange; /* Neon blue icons */
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Services Section */
+.services-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.service-card {
+    background-color: #1c1c1c; /* Dark gray cards */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+        background-color: orange; /* Change background color on hover */
+         /* Change text color to white */
+        transform: scale(1.05); /* Slightly scale the card for a "pop" effect */
+    
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Resume Section */
+#resume {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#resume .btn {
+    background-color: orange; /* Neon blue button */
+    color: #000; /* Black text */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+#resume .btn:hover {
+    background-color: orange;
+}
+
+/* Portfolio Section */
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.project-card {
+    background-color: #1c1c1c; /* Dark gray cards */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color:orange; /* Neon blue links */
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color:orange;
+}
+
+/* Certifications Section */
+.certificates-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.certificate-card {
+    background-color: #1c1c1c; /* Dark gray cards */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.certificate-card img {
+    max-width: 100%;
+    height: 150px; /* Fixed height for images */
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff; /* White text */
+}
+
+.certificate-card p {
+    font-size: 14px;
+    color: #7f8c8d; /* Lighter text for description */
+}
+
+/* Contact Section */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased spacing between form elements */
+    max-width: 500px;
+    margin: 30px auto; /* Added top and bottom margin for better spacing */
+    padding: 25px; /* Slightly increased padding */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Label Styling */
+form label {
+    font-size: 16px;
+    color: orange; /* Orange color */
+    font-weight: bold;
+    margin-bottom: 5px; /* Space below labels */
+}
+
+/* Input & Textarea Styling */
+form input, form textarea {
+    width: 100%;
+    padding: 14px; /* Increased padding for better spacing */
+    font-size: 16px;
+    border: 2px solid orange;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Additional space for textarea */
+form textarea {
+    height: 120px;
+    resize: none;
+    margin-bottom: 10px; /* Space below textarea */
+}
+
+/* Focus Effect */
+form input:focus, form textarea:focus {
+    border-color: #cc5500;
+    box-shadow: 0px 0px 8px rgba(255, 102, 0, 0.5);
+}
+
+/* Button Styling */
+form button {
+    background-color: orange; /* Orange */
+    color: white;
+    padding: 14px 20px; /* Increased padding */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px; /* Added space between textarea and button */
+}
+
+/* Button Hover Effect */
+form button:hover {
+    background-color: orange; /* Darker orange */
+}
+
+
+/* Footer */
+footer {
+    background-color: #000; /* Black background */
+    padding: 20px;
+    color: orange; /* Neon blue text */
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Changed to black */
+    color: #fff; /* Changed text color to white */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scroll */
+    padding-left: 10px;  /* Add padding to the left */
+    padding-right: 10px; /* Add padding to the right */
+}
+
+/* Container */
+.container {
+    width: 100%; /* Take full width */
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Center content */
+    padding: 0 10px; /* Added horizontal padding for space on both sides */
+}
+
+/* Navbar */
+nav {
+    background-color: #000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+nav .logo {
+    font-size: 24px;
+    color: orange; /* White color for logo */
+    font-weight: bold;
+}
+
+nav .nav-links {
+    float: right;
+}
+
+nav .nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: #fff; /* White text for links */
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: orange; /* Neon blue on hover */
+}
+
+/* Home Section */
+.home-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Other sections */
+.section {
+    padding: 60px 0;
+    background-color: #000;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Home Section */
+.main_banner {
+
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.main_banner .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner_content {
+    max-width: 100%;
+}
+
+.banner_content h1, .banner_content h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.banner_content p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.banner_content ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.banner_content ul li {
+    font-size: 1.1rem;
+    color: orange;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main_banner .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner_content {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .banner-images img {
+        max-width: 250px;
+    }
+}
+#resume p {
+    margin-bottom: 20px; /* Adds space below the <p> */
+}
+
+#resume a {
+    margin-top: 10px; /* Adds space above the <a> */
+}
+/* Style for the skill cards */
+.skill-card {
+     /* Light grey background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+}
+
+.skill-card:hover {
+    background-color: orange; /* Change background color on hover */
+     /* Change text color to white */
+    transform: scale(1.05); /* Slightly scale the card for a "pop" effect */
+}
+
+/* Optional: Adding transition to icons for better hover effect */
+.skill-card i {
+    font-size: 40px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover i {
+    transform: rotate(15deg); /* Rotate the icon slightly on hover */
+}
+
+.image {
+
+    position: absolute;
+    left: 880px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically (if needed) */
+            height: 100vh;
+}
+.circle-img{
+    width: 400px;
+    height: 400px;
+    clip-path: circle(50%);
+    object-fit: cover; /* Ensures the image fills the circular area */
+            display: block;
+}
+
+
+.logo {
+    color: #ff6600; /* Sets the color of the logo text */
+    font-weight: bold;
+}
+
+.text {
+    color: #ff6600; /* Sets the color of the text inside elements with class "text" */
+}
+
+/* Contact Info */
+.contact-info {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.phone {
+    font-weight: bold;
+    color: #ff9900;
+}
+
+.email {
+    font-weight: bold;
+    color: #ff9900;
+}
+
+/* Social Links */
+.social-links {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links i {
+    color: #ff9900;
+    margin-right: 5px;
+}
